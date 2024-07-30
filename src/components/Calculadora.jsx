@@ -10,12 +10,15 @@ function Calculadora() {
     <input 
         type="number" 
         value={num1} 
-        onChange={(event) => setNum1(event.target.value)}></input>
+        onChange={(event) => setNum1(parseFloat(event.target.value))}>
+    </input>
     <input 
         type="number" 
         value={num2} 
-        onChange={(event) => setNum2(event.target.value)}></input>
-    <button>+</button>
+        onChange={(event) => setNum2(parseFloat(event.target.value))}>
+    </input>
+    <button onClick={() => setResult(num1 + num2)}>+</button>
+    <button onClick={() => setResult(num1 - num2)}>-</button>
     <p>{result}</p>
     </>;
 }
