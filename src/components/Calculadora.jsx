@@ -16,9 +16,11 @@ function Calculadora() {
         type="number" 
         value={num2} 
         onChange={(event) => setNum2(parseFloat(event.target.value))}>
-    </input>
+    </input><br></br>
     <button onClick={() => setResult(num1 + num2)}>+</button>
     <button onClick={() => setResult(num1 - num2)}>-</button>
+    <button onClick={() => setResult(num1 * num2)}>x</button>
+    <button onClick={() => setResult(num1 / num2)}>÷</button>
     <p>{result}</p>
     </>;
 }
